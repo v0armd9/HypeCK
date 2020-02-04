@@ -12,6 +12,8 @@
 		551FC82323E9DFD100C52E07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551FC82123E9DFD100C52E07 /* Main.storyboard */; };
 		551FC82523E9DFD500C52E07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551FC82423E9DFD500C52E07 /* Assets.xcassets */; };
 		551FC82823E9DFD500C52E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551FC82623E9DFD500C52E07 /* LaunchScreen.storyboard */; };
+		551FC83823E9E64900C52E07 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551FC83723E9E64900C52E07 /* CloudKit.framework */; };
+		551FC83A23E9E6A700C52E07 /* Hype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FC83923E9E6A700C52E07 /* Hype.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		551FC82423E9DFD500C52E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		551FC82723E9DFD500C52E07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		551FC82923E9DFD500C52E07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		551FC83523E9E63800C52E07 /* HypeCK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HypeCK.entitlements; sourceTree = "<group>"; };
+		551FC83723E9E64900C52E07 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		551FC83923E9E6A700C52E07 /* Hype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hype.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551FC83823E9E64900C52E07 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				551FC81A23E9DFD100C52E07 /* HypeCK */,
 				551FC81923E9DFD100C52E07 /* Products */,
+				551FC83623E9E64900C52E07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +61,7 @@
 		551FC81A23E9DFD100C52E07 /* HypeCK */ = {
 			isa = PBXGroup;
 			children = (
+				551FC83523E9E63800C52E07 /* HypeCK.entitlements */,
 				551FC83123E9E3A500C52E07 /* Views */,
 				551FC83223E9E3AC00C52E07 /* Controllers */,
 				551FC83323E9E3B300C52E07 /* Models */,
@@ -101,6 +109,7 @@
 		551FC83323E9E3B300C52E07 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				551FC83923E9E6A700C52E07 /* Hype.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -110,6 +119,14 @@
 			children = (
 			);
 			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		551FC83623E9E64900C52E07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				551FC83723E9E64900C52E07 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +202,7 @@
 			files = (
 				551FC81C23E9DFD100C52E07 /* AppDelegate.swift in Sources */,
 				551FC81E23E9DFD100C52E07 /* SceneDelegate.swift in Sources */,
+				551FC83A23E9E6A700C52E07 /* Hype.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HypeCK/HypeCK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QP48FW2MG5;
 				INFOPLIST_FILE = HypeCK/Info.plist;
@@ -346,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HypeCK/HypeCK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QP48FW2MG5;
 				INFOPLIST_FILE = HypeCK/Info.plist;
