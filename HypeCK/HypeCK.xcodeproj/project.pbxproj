@@ -14,6 +14,10 @@
 		551FC82823E9DFD500C52E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551FC82623E9DFD500C52E07 /* LaunchScreen.storyboard */; };
 		551FC83823E9E64900C52E07 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551FC83723E9E64900C52E07 /* CloudKit.framework */; };
 		551FC83A23E9E6A700C52E07 /* Hype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FC83923E9E6A700C52E07 /* Hype.swift */; };
+		551FC83C23E9EE8E00C52E07 /* HypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FC83B23E9EE8E00C52E07 /* HypeController.swift */; };
+		551FC83F23E9EFE800C52E07 /* HypeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FC83E23E9EFE800C52E07 /* HypeError.swift */; };
+		551FC84123E9F90D00C52E07 /* HypeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FC84023E9F90D00C52E07 /* HypeListViewController.swift */; };
+		551FC84323EA0D2900C52E07 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FC84223EA0D2900C52E07 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		551FC83523E9E63800C52E07 /* HypeCK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HypeCK.entitlements; sourceTree = "<group>"; };
 		551FC83723E9E64900C52E07 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		551FC83923E9E6A700C52E07 /* Hype.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hype.swift; sourceTree = "<group>"; };
+		551FC83B23E9EE8E00C52E07 /* HypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeController.swift; sourceTree = "<group>"; };
+		551FC83E23E9EFE800C52E07 /* HypeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeError.swift; sourceTree = "<group>"; };
+		551FC84023E9F90D00C52E07 /* HypeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeListViewController.swift; sourceTree = "<group>"; };
+		551FC84223EA0D2900C52E07 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 				551FC83123E9E3A500C52E07 /* Views */,
 				551FC83223E9E3AC00C52E07 /* Controllers */,
 				551FC83323E9E3B300C52E07 /* Models */,
+				551FC83D23E9EFC700C52E07 /* Helpers+Extensions */,
 				551FC82F23E9E38400C52E07 /* Resources */,
 			);
 			path = HypeCK;
@@ -85,6 +94,7 @@
 		551FC83023E9E39200C52E07 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				551FC84023E9F90D00C52E07 /* HypeListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -117,6 +127,7 @@
 		551FC83423E9E3B800C52E07 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				551FC83B23E9EE8E00C52E07 /* HypeController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -127,6 +138,15 @@
 				551FC83723E9E64900C52E07 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		551FC83D23E9EFC700C52E07 /* Helpers+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				551FC83E23E9EFE800C52E07 /* HypeError.swift */,
+				551FC84223EA0D2900C52E07 /* DateExtension.swift */,
+			);
+			path = "Helpers+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +220,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551FC83F23E9EFE800C52E07 /* HypeError.swift in Sources */,
+				551FC84323EA0D2900C52E07 /* DateExtension.swift in Sources */,
 				551FC81C23E9DFD100C52E07 /* AppDelegate.swift in Sources */,
+				551FC84123E9F90D00C52E07 /* HypeListViewController.swift in Sources */,
+				551FC83C23E9EE8E00C52E07 /* HypeController.swift in Sources */,
 				551FC81E23E9DFD100C52E07 /* SceneDelegate.swift in Sources */,
 				551FC83A23E9E6A700C52E07 /* Hype.swift in Sources */,
 			);
@@ -349,7 +373,7 @@
 				CODE_SIGN_ENTITLEMENTS = HypeCK/HypeCK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QP48FW2MG5;
-				INFOPLIST_FILE = HypeCK/Info.plist;
+				INFOPLIST_FILE = HypeCK/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,7 +392,7 @@
 				CODE_SIGN_ENTITLEMENTS = HypeCK/HypeCK.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QP48FW2MG5;
-				INFOPLIST_FILE = HypeCK/Info.plist;
+				INFOPLIST_FILE = HypeCK/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
