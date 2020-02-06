@@ -105,4 +105,33 @@ class HypeController {
         publicDB.add(operation)
     }
     
+    func subscribeForRemoteNotifications(completion: @escaping (_ error: Error?) -> Void) {
+        
+        // Step 2 - Create the needed predicate to pass into the subscription
+            // This one just pulls all objects matching the recordType
+        let predicate = NSPredicate(value: true)
+        
+        // Step 1 - Create CKQuerySubscription object
+        let subscription = CKQuerySubscription(recordType: HypeStrings.recordTypeKey, predicate: predicate, options: .firesOnRecordCreation)
+        
+        // Step 3 - Create a notification and set it's properties
+        let notificationInfo = CKSubscription.NotificationInfo()
+        notificationInfo.title = "CHOO CHOO"
+        notificationInfo.alertBody = "Can't Stop the Hype Train!!"
+        notificationInfo.shouldBadge = true
+        notificationInfo.soundName = "default"
+        
+        subscription.notificationInfo = notificationInfo
+        
+        // Step 4 - Save the subscription to the database
+        publicDB.save(subscription) { (_, error) in
+            
+            if let error = error {
+                completion(error)
+            }
+            
+            completion(nil)
+        }
+    }
+    
 }
